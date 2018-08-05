@@ -13,7 +13,7 @@ Installation steps:
 7) Edit the system specific setting, for example in conky_network change it to your wifi/eth interface
 
 Enjoy!
-(you can ignore the debug folder)
+
 
 
 Updates
