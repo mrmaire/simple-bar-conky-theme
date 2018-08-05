@@ -5,7 +5,7 @@
 # v. 0.1
 
 use_xft yes
-xftfont silkscreen:size=7.5
+xftfont play:bold:size=9
 xftalpha 0.1
 update_interval 1
 total_run_times 0
@@ -50,4 +50,4 @@ color6 D45959 #rojo
 
 
 TEXT
-${color3}Distribución:${color1} ${execi 60 lsb_release -ds | awk '{print $1}'} ${execi 60 lsb_release -ds | awk '{print $2}'} ${execi 60 lsb_release -ds | awk '{print $3}'} ${execi 60 lsb_release -cs | awk '{print $1}'}  ($machine) ${color5} | ${color3}Maquina:${color2} $nodename ${color5}| ${color3}Hora: ${color4}${time %I:%M:%S} ${color5}| ${color3}Fecha: ${color4}${time %a}, ${time %d} ${time  %B} ${time %Y} ${color5}| ${color3} En uso: ${color2} $uptime ${color5}| ${color3}Procesos: ${color2}${processes} / ${running_processes} ${color5}| ${color3}Kernel:${color1} $kernel ${color5}| ${color 9e6ffe}CPU: ${color d3d3d3}${cpu}% / ${color6}${hwmon temp 1}°C ${color5}| ${color3}RAM: ${color2}$memperc% ${color5}| ${color6}Root: ${color e0e0e0}${fs_free /} / ${fs_size /} ${color5}| ${color4}Home: ${color e0e0e0}${fs_free /home} / ${fs_size /home} ${color5}|  ${color a6e22e} ${font PizzaDude Bullets:size=6}U${font} ${downspeedgraph enp40s0 8,60 black black} | ${color D45959} ${font PizzaDude Bullets:size=6}O${font}${alignr}${upspeedgraph enp40s0 8,60 black black} ${color5}| ${color3}Nvidia: ${color4} ${execi 5 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MiB ${alignr}${color6}${nvidia temp} °C 
+${color3}Distribución:${color1} ${execi 60 lsb_release -ds | awk '{print $1}'} ${execi 60 lsb_release -ds | awk '{print $2}'} ${execi 60 lsb_release -ds | awk '{print $3}'} ${execi 60 lsb_release -cs | awk '{print $1}'}  ($machine) ${color5} | ${color3}Maquina:${color2} $nodename ${color5}| ${color3}Hora: ${color4}${time %I:%M:%S} ${color5}| ${color3}Fecha: ${color4}${time %a}, ${time %d} ${time  %B} ${time %Y} ${color5}| ${color3} En uso: ${color2} $uptime ${color5}| ${color3}Procesos: ${color2}${processes} / ${running_processes} ${color5}| ${color3}Kernel:${color1} $kernel ${color5}| ${color 9e6ffe}CPU: ${color d3d3d3}${cpu}% / ${color6}${hwmon temp 1}°C ${color5}| ${color3}RAM: ${color2}$memperc% ${color5}| ${color6}Root: ${color e0e0e0}${fs_free /} / ${fs_size /} ${color5}| ${color4}Home: ${color e0e0e0}${fs_free /home} / ${fs_size /home} ${color5}|  ${color a6e22e} UP: ${downspeedgraph enp40s0 8,60 black black} | ${color D45959} Down: ${upspeedgraph enp40s0 8,60 black black} ${color5}| ${color3}Nvidia: ${color4} ${execi 5 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MiB ${alignr}${color6}${nvidia temp} °C 
