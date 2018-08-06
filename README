@@ -6,7 +6,7 @@ I've tested this running an up-to-date Majanro Linux 64bit installation, but I d
 Installation steps:
 ====================
 1) Put the conkyrc in you ~/.conky folder o install through conky-manager.
-2) Make sure your conky version stupport lua and nvidia (arch amd Manjaro: conky-lua-nv)
+2) Make sure your conky version stupport lua and nvidia (Arch and Manjaro: conky-lua-nv)
 3) Make sure you've got all the dependencies (hddtemp ...) and they are running (also on startup)
 4) Make sure you've installed the fonts in /fonts
 5) Edit the system specific setting, for example your wifi/eth interface
