@@ -1,4 +1,4 @@
-﻿Simple Bar Conky Theme v. 0.1 by mrmaire <maire.nunez@gmail.com>
+﻿Simple Bar Conky Theme v. 0.2 by mrmaire <maire.nunez@gmail.com>
 A minimalist theme for conky
 
 I've tested this running an up-to-date Manjaro Linux 64bit installation, but I do not know if it works in other distributions.
@@ -15,7 +15,8 @@ Enjoy!
 
 Updates
 ====================
- 0.1 Initial commit
+ 0.1 Initial commit.
+ 0.2 Covert config file to the new conky 1.10 syntax.
 
 Credits
 ====================
