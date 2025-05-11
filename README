@@ -17,6 +17,7 @@ Updates
 ====================
  0.1 Initial commit.
  0.2 Covert config file to the new conky 1.10 syntax.
+ 0.3 Modified the code to correctly display the Nvidia GPU temperature.
 
 Credits
 ====================
