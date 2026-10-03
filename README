@@ -1,4 +1,4 @@
-﻿Simple Bar Conky Theme v. 0.2 by mrmaire <maire.nunez@gmail.com>
+﻿Simple Bar Conky Theme v. 0.4 by mrmaire <maire.nunez@gmail.com>
 A minimalist theme for conky
 
 I've tested this running an up-to-date Manjaro Linux 64bit installation, but I do not know if it works in other distributions.
@@ -18,6 +18,7 @@ Updates
  0.1 Initial commit.
  0.2 Covert config file to the new conky 1.10 syntax.
  0.3 Modified the code to correctly display the Nvidia GPU temperature.
+ 0.4 The code has been cleaned up a bit and tested with Conky version 1.25.2.
 
 Credits
 ====================
