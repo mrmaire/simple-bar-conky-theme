@@ -1,44 +1,51 @@
-
 conky.config = {
 
--- Simple Bar Conky Theme V. 0.1 - by mrmaire <maire.nunez@gmail.co>
--- Minimalist theme for conky
+    -- Simple Bar Conky Theme V. 0.4 - by mrmaire <maire.nunez [at] gmail.com>
+    -- Minimalist theme for conky
 
 
-use_xft = true,
-font = 'play:bold:size=9',
-xftalpha = 0.1,
-update_interval = 3,
-total_run_times = 0,
+-- Conky settings
+    update_interval = 1,
+    total_run_times = 0,
+    background = 'true',
+    alignment = 'top_middle',
+    cpu_avg_samples = 2,
+    net_avg_samples = 1,
 
-own_window = true,
-own_window_type = 'normal',
-own_window_transparent = false,
-own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-own_window_colour = 'black',
-own_window_argb_visual = true,
-own_window_argb_value = 192,
-double_buffer = true,
-draw_shades = false,
-draw_outline = false,
-draw_borders = false,
-draw_graph_borders = false,
-default_color = 'white',
-default_shade_color = 'red',
-default_outline_color = 'green',
-alignment = 'top_middle',
-gap_x = 0,
-gap_y = 0,
-no_buffers = true,
-uppercase = false,
-draw_shades = false,
-cpu_avg_samples = 2,
-net_avg_samples = 1,
-override_utf8_locale = true,
-use_spacer = 'right',
+-- Text settings
+    use_xft = true,
+    font = 'play:bold:size=9',
+    xftalpha = 0.9,
+    override_utf8_locale = true,
+    uppercase = false,
+    double_buffer = true,
+    default_color = 'white',
+    default_shade_color = 'red',
+    default_outline_color = 'green',
+
+-- Window specifications
+    own_window_class = 'Conky',
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_transparent = false,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_colour = '#000000',
+    own_window_argb_visual = true,
+    own_window_argb_value = 200,
+    gap_x = 0,
+    gap_y = 0,
+    border_inner_margin = 0,
+    border_outer_margin = 0,
+
+-- Graphics settings
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+    use_spacer = 'right',
 };
 
 
 conky.text = [[
-${color cbcbcb}System:${color 17ba9d} ${execi 60 lsb_release -ds | awk '{print $1}'} ${execi 60 lsb_release -ds | awk '{print $2}'} ${execi 60 lsb_release -ds | awk '{print $3}'} ${execi 60 lsb_release -cs | awk '{print $1}'}  ($machine) ${color a6e22e} | ${color cbcbcb}Computer:${color fd971f} $nodename ${color a6e22e}| ${color cbcbcb}Time: ${color 20a5e4}${time %I:%M:%S} ${color a6e22e}| ${color cbcbcb}Date: ${color 20a5e4}${time %a}, ${time %d} ${time  %B} ${time %Y} ${color a6e22e}| ${color cbcbcb} Uptime: ${color fd971f} $uptime ${color a6e22e}| ${color cbcbcb}Processes: ${color fd971f}${processes} / ${running_processes} ${color a6e22e}| ${color cbcbcb}Kernel:${color #17ba9d} $kernel ${color a6e22e}| ${color 9e6ffe}CPU: ${color d3d3d3}${cpu}% / ${color D45959}${hwmon temp 1}°C ${color a6e22e}| ${color cbcbcb}RAM: ${color fd971f}$memperc% ${color a6e22e}| ${color D45959}Root: ${color e0e0e0}${fs_free /} / ${fs_size /} ${color a6e22e}| ${color 20a5e4}Home: ${color e0e0e0}${fs_free /home} / ${fs_size /home} ${color a6e22e}|  ${color a6e22e} UP: ${color cbcbcb}${downspeedgraph enp40s0 8,60 black black} | ${color D45959} Down: ${color cbcbcb}${upspeedgraph enp40s0 8,60 black black} ${color #a6e22e}| ${color cbcbcb}Nvidia: ${color 20a5e4} ${execi 5 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MiB ${alignr}${color D45959} ${execi 60 nvidia-settings -query [gpu:0]/GPUCoreTemp -t}°C
+${color cbcbcb}System:${color 17ba9d} ${execi 60 lsb_release -ds | awk '{print $1}'} ${execi 60 lsb_release -ds | awk '{print $2}'} ${execi 60 lsb_release -ds | awk '{print $3}'} ${execi 60 lsb_release -cs | awk '{print $1}'}  ($machine) ${color a6e22e} | ${color cbcbcb}Computer:${color fd971f} $nodename ${color a6e22e}| ${color cbcbcb}Time: ${color 20a5e4}${time %I:%M:%S} ${color a6e22e}| ${color cbcbcb}Date: ${color 20a5e4}${time %a}, ${time %d} ${time  %B} ${time %Y} ${color a6e22e}| ${color cbcbcb} Uptime: ${color fd971f} $uptime ${color a6e22e}| ${color cbcbcb}Processes: ${color fd971f}${processes} / ${running_processes} ${color a6e22e}| ${color cbcbcb}Kernel:${color #17ba9d} $kernel ${color a6e22e}| ${color 9e6ffe}CPU: ${color d3d3d3}${cpu}% / ${color D45959}${hwmon temp 1}°C ${color a6e22e}| ${color cbcbcb}RAM: ${color fd971f}$memperc% ${color a6e22e}| ${color D45959}Root: ${color e0e0e0}${fs_free /} / ${fs_size /} ${color a6e22e}| ${color 20a5e4}Home: ${color e0e0e0}${fs_free /home} / ${fs_size /home} ${color a6e22e}|  ${color a6e22e} UP: ${color cbcbcb} ${downspeedgraph enp4s0 8,60 #ed0e6f #f571aa} | ${color D45959} Down: ${color cbcbcb} ${upspeedgraph enp4s0 8,60 #48edf0 #1bb3fa} ${color #a6e22e}| ${color cbcbcb}Nvidia: ${color 20a5e4} ${execi 5 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MiB ${alignr} ${color D45959} ${execi 60 nvidia-settings -query [gpu:0]/GPUCoreTemp -t}°C
 ]];
